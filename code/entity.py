@@ -1,0 +1,52 @@
+import pygame
+from math import sin
+
+class Entity(pygame.sprite.Sprite):
+
+	'''this class is the parent class for all entities that appear in the game. it allows the entity to be able to move,
+	collide with objects and flicker when attacked'''
+
+	def __init__(self, groups):
+		super().__init__(groups)
+		self.frame_index = 0
+		self.animation_speed = 0.2
+		self.direction = pygame.math.Vector2()
+
+	def move(self, speed):
+		#move the entity in a 2d vector and check if there is collision
+		#stops the entity if there is collision occuring
+		if self.direction.magnitude() != 0:
+			self.direction = self.direction.normalize()
+
+		self.hitbox.x += self.direction.x * speed
+		self.collision('horizontal')
+		self.hitbox.y += self.direction.y * speed
+		self.collision('vertical')
+		self.rect.center = self.hitbox.center
+
+	def collision(self, direction):
+		#checks for collision with other sprites
+		if direction == 'horizontal':
+			for sprite in self.obstacle_sprites:
+				if sprite.hitbox.colliderect(self.hitbox):
+					if self.direction.x > 0: # moving right
+						self.hitbox.right = sprite.hitbox.left
+					if self.direction.x < 0: # moving left
+						self.hitbox.left = sprite.hitbox.right
+
+		if direction == 'vertical':
+			for sprite in self.obstacle_sprites:
+				if sprite.hitbox.colliderect(self.hitbox):
+					if self.direction.y > 0: # moving down
+						self.hitbox.bottom = sprite.hitbox.top
+					if self.direction.y < 0: # moving up
+						self.hitbox.top = sprite.hitbox.bottom
+
+	def wave_value(self):
+		#changes the transparency of the entity so that it alternates
+		#used when the entity is attacked
+		value = sin(pygame.time.get_ticks())
+		if value >= 0: 
+			return 255
+		else: 
+			return 0

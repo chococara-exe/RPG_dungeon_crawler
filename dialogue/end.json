@@ -1,0 +1,30 @@
+{
+  "root": "start",
+  "nodes": [
+    {
+      "id": "start",
+      "text": "i think this is the last level...",
+      "choices": [["next", "stairs"]]
+    },
+    {
+      "id": "stairs",
+      "text": "now all i need is to find the stairs, and then i can finally go home!",
+      "choices": [["next", "family"]]
+    },
+    {
+      "id": "family",
+      "text": "mom... dad... i miss them so much",
+      "choices": [["next", "home"]]
+    },
+    {
+      "id": "home",
+      "text": "it's ok! i'll be able to go home soon! let's not wait any longer",
+      "choices": [["end", "STOP"]]
+    },
+    {
+      "id": "STOP",
+      "text": "",
+      "choices": [["", ""]]
+    }
+  ]
+}

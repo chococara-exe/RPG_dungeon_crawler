@@ -1,0 +1,55 @@
+{
+  "root": "start",
+  "nodes": [
+    {
+      "id": "start",
+      "text": "now that i have all the items, i should assemble them",
+      "choices": [["next", "first"]]
+    },
+    {
+      "id": "try again",
+      "text": "hmmm... that doesnt seem right, i think ill need to remake it",
+      "choices": [["next", "first"]]
+    },
+    {
+      "id": "first",
+      "text": "what should go in first?",
+      "choices": [["sand", "try again"], ["cloth", "second"], ["charcoal", "try again"]]
+    },
+    {
+      "id": "second",
+      "text": "the cloth will prevent the things from going into the clean water, what should go in next?",
+      "choices": [["charcoal", "third"], ["sand", "try again"], ["rock", "try again"]]
+    },
+    {
+      "id": "third",
+      "text": "the charcoal should remove the microorganisms in the water, what should go in next?",
+      "choices": [["rock", "try again"], ["sand", "last"]]
+    },
+    {
+      "id": "last",
+      "text": "lastly, to add the rocks. and we're done!",
+      "choices": [["next", "done"]]
+    },
+    {
+      "id": "done",
+      "text": "the water filter seems correct. time to filter my dirty water several times",
+      "choices": [["filter water", "clean"]]
+    },
+    {
+      "id": "clean",
+      "text": "yay! i have successfully made clean water. it tastes better than i expected",
+      "choices": [["next", "level"]]
+    },
+    {
+      "id": "level",
+      "text": "i feel well rested now. i think its time to move on to the next level",
+      "choices": [["move on", "STOP"]]
+    },
+    {
+      "id": "STOP",
+      "text": "",
+      "choices": [["", ""]]
+    }
+  ]
+}

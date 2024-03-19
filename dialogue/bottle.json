@@ -1,0 +1,15 @@
+{
+  "root": "bottle",
+  "nodes": [
+    {
+      "id": "bottle",
+      "text": "someone left a plastic bottle here. this could be base for the water filter",
+      "choices": [["collect bottle", "STOP"]]
+    },
+    {
+      "id": "STOP",
+      "text": "",
+      "choices": [["", ""]]
+    }
+  ]
+}

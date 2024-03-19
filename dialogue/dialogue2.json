@@ -1,0 +1,50 @@
+{
+  "root": "start",
+  "nodes": [
+    {
+      "id": "start",
+      "text": "there seems to be no monsters on this floor, maybe i could rest for a while",
+      "choices": [["next", "rest"]]
+    },
+    {
+      "id": "rest",
+      "text": "...",
+      "choices": [["next", "thirsty"]]
+    },
+    {
+      "id": "thirsty",
+      "text": "im feeling a bit thirsty, but all i have on me right now is some unclean water",
+      "choices": [["drink unclean water", "ew"], ["filter water", "school"]]
+    },
+    {
+      "id": "ew",
+      "text": "BLEUGHHH!!!!",
+      "choices": [["next", "sick"]]
+    },
+    {
+      "id": "sick",
+      "text": "that was some nasty water... i think im going to be sick",
+      "choices": [["next", "filter"]]
+    },
+    {
+      "id": "filter",
+      "text": "maybe i can try filtering the water",
+      "choices": [["yes", "school"], ["no", "need"]]
+    },
+    {
+      "id": "need",
+      "text": "but i am feeling really thirsty, i might die of thirst",
+      "choices": [["next", "filter"]]
+    },
+    {
+      "id": "school",
+      "text": "i remember learning how to make a filter in school. lets see if i can still remember how to make it",
+      "choices": [["end", "STOP"]]
+    },
+    {
+      "id": "STOP",
+      "text": "",
+      "choices": [["", ""]]
+    }
+  ]
+}

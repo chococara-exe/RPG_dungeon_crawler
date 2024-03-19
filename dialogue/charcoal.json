@@ -1,0 +1,15 @@
+{
+  "root": "charcoal",
+  "nodes": [
+    {
+      "id": "charcoal",
+      "text": "there is some charcoal here, was there a campfire here before? i could use the charcoal",
+      "choices": [["collect charcoal", "STOP"]]
+    },
+    {
+      "id": "STOP",
+      "text": "",
+      "choices": [["", ""]]
+    }
+  ]
+}

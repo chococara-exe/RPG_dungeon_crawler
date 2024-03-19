@@ -1,0 +1,15 @@
+{
+  "root": "rocks",
+  "nodes": [
+    {
+      "id": "rocks",
+      "text": "i think we need to use some rocks in the water filter, let me collect some",
+      "choices": [["collect rocks", "STOP"]]
+    },
+    {
+      "id": "STOP",
+      "text": "",
+      "choices": [["", ""]]
+    }
+  ]
+}

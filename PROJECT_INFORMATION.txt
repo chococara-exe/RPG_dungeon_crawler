@@ -1,0 +1,12 @@
+Programming language used: Python
+Purpose of code: to play a dungeon crawler game with a combat, inventory and dialogue system
+Scale of project: number of classes = 20, lines of code = 1242
+Use of OOP concepts:
+- abstraction (Game)
+- inheritance (eg. Player is a child of Entity)
+- composition (eg. Player has an Inventory)
+- aggregation (eg. Level might have Enemies)
+- encapsulation (class attributes are only accessible within the class or by class methods)
+Interesting use of data structures:
+- a tree is created for the dialogue options
+- dictionaries are used to store entity data
